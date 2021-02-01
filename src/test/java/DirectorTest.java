@@ -11,7 +11,7 @@ public class DirectorTest {
     @Before
     public void before(){
         director = new Director("Tony Soprano", "NUNOFYABUSINESS",
-                            120000.00, "Logistics", 1000000000.00);
+                            120000.00, "Logistics", 1000000.00);
     }
 
     @Test
@@ -59,6 +59,17 @@ public class DirectorTest {
     }
 
     @Test
+    public void canGetBudget(){
+        assertEquals(1000000.00, director.getBudget(), 0.01);
+    }
+
+    @Test
+    public void canChangeBudget(){
+        director.setBudget(10.00);
+        assertEquals(10.00, director.getBudget(), 0.01);
+    }
+
+    @Test
     public void canRaiseSalary(){
         director.raiseSalary(1000.00);
         assertEquals(121000.00, director.getSalary(), 0.01);
@@ -66,6 +77,7 @@ public class DirectorTest {
 
     @Test
     public void canGetPayBonus(){
-        assertEquals(1200.00, director.payBonus(), 0.01);
+        assertEquals(2400.00, director.payBonus(), 0.01);
     }
+
 }

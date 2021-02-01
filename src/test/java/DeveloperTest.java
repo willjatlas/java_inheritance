@@ -25,6 +25,12 @@ public class DeveloperTest {
     }
 
     @Test
+    public void cantSetNameIfEmptyString(){
+        developer.setName("");
+        assertEquals("Brian Blessed", developer.getName());
+    }
+
+    @Test
     public void hasNINumber(){
         assertEquals("01LEGEND10", developer.getnINumber());
     }

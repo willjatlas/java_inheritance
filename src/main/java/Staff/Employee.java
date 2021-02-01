@@ -17,7 +17,7 @@ public abstract class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(!"".equals(name)) this.name = name;
     }
 
     public String getnINumber() {
@@ -37,11 +37,11 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double amount){
-        salary += amount;
+        salary += Math.abs(amount);
     }
 
     public double payBonus(){
-        return salary *0.01;
+        return salary * 0.01;
     }
 
 }
