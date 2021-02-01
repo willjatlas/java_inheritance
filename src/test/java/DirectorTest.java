@@ -26,6 +26,12 @@ public class DirectorTest {
     }
 
     @Test
+    public void cantSetNameIfEmptyString() {
+        director.setName("");
+        assertEquals("Tony Soprano", director.getName());
+    }
+
+    @Test
     public void hasNINumber(){
         assertEquals("NUNOFYABUSINESS", director.getnINumber());
     }

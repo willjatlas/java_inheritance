@@ -28,6 +28,12 @@ public class ManagerTest {
     }
 
     @Test
+    public void cantSetNameIfEmptyString() {
+        manager.setName("");
+        assertEquals("Steve Jobs", manager.getName());
+    }
+
+    @Test
     public void hasNINumber(){
         assertEquals("JT26172APL", manager.getnINumber());
     }

@@ -25,6 +25,12 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void cantSetNameIfEmptyString() {
+        dBAdmin.setName("");
+        assertEquals("Ralph", dBAdmin.getName());
+    }
+
+    @Test
     public void hasNINumber(){
         assertEquals("00R00100T", dBAdmin.getnINumber());
     }
